@@ -10,7 +10,6 @@ class Solution:
             "M" : 1000,
         }
         result = 0 
-        i = 0 
         for i in range(len(s)-1):
             if(d[s[i]] < d[s[i+1]]):
                 result -= d[s[i]]
