@@ -11,13 +11,12 @@ class Solution:
         }
         result = 0 
         i = 0 
-        while i < len(s)-1:
+        for i in range(len(s)-1):
             if(d[s[i]] < d[s[i+1]]):
                 result -= d[s[i]]
             else:
                 result += d[s[i]]
-            i += 1 
+
         result += d[s[len(s)-1]]
-        
         return result
         
