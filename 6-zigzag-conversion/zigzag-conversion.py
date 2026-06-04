@@ -7,7 +7,6 @@ class Solution:
         result = [""] * numRows
         b = 1
         k = 0
-        final = ""
 
         for i in s:
             result[k] = result[k]+i 
@@ -19,10 +18,7 @@ class Solution:
             elif k == numRows-1:
                 b = -1
         
-        for i in range(numRows):
-            final += result[i]
-        
-        return final
+        return "".join(result)
 
         
 
