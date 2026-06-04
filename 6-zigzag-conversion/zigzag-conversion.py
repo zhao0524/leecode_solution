@@ -4,14 +4,10 @@ class Solution:
             return s
         
         
-        e = ""
-        result = []
+        result = [""] * numRows
         b = 1
         k = 0
         final = ""
-        for i in range(numRows):
-            result.append(e)
-
 
         for i in s:
             result[k] = result[k]+i 
