@@ -1,8 +1,8 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         hash_s = {}
-        hash_t = {}
-        
+        if len(s) != len(t):
+            return False
         for i in s:
             if i in hash_s:
                 hash_s[i] += 1
@@ -10,10 +10,15 @@ class Solution:
                 hash_s[i] = 1
         
         for i in t:
-            if i in hash_t:
-                hash_t[i] += 1
+            if i in hash_s:
+                if hash_s[i] == 0:
+                    return False
+                else:
+                    hash_s[i] -= 1
             else:
-                hash_t[i] = 1
-        return hash_s == hash_t
+                return False
+
+        return True 
+        
 
         
